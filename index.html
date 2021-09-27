@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Guess My Number!</h1>
-      <p class="between">(Between 1 and 20)</p>
+      <p class="rules">(Rules)</p>
       <button class="btn again">Again!</button>
       <div class="number">?</div>
     </header>
@@ -19,6 +19,23 @@
         <input type="number" class="guess" />
         <button class="btn check">Check!</button>
       </section>
+      <div class="modal hidden">
+        <button class="close-modal">&times;</button>
+        <h2 class="modalHeader">Rules</h2>
+        <ul class="rulesList">
+          <li class="rulesListLi">
+            Objective: guess the correct number in the least amount of guesses.
+          </li>
+          <li class="rulesListLi">
+            The secrect number will be generated every new turn and it wil
+            always be between 1 - 20.
+          </li>
+          <li class="rulesListLi">
+            Every incorrect answer will take one point from your score.
+          </li>
+          <li class="rulesListLi">High score will not persist on reload.</li>
+        </ul>
+      </div>
       <section class="right">
         <p class="message">Start guessing...</p>
         <p class="label-score">💯 Score: <span class="score">20</span></p>
@@ -26,6 +43,7 @@
           🥇 Highscore: <span class="highscore">0</span>
         </p>
       </section>
+      <div class="overlay hidden"></div>
     </main>
     <script src="script.js"></script>
   </body>

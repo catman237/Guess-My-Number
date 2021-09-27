@@ -1,8 +1,21 @@
 'use strict';
 
+const btnRules = document.querySelector('.rules')
+const btnX = document.querySelector('.close-modal')
+const modal = document.querySelector('.modal')
+
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
+
+const openModal = () => {
+  document.querySelector('.modal').classList.remove('hidden')
+}
+
+const closeModal = () => {
+  console.log('clicked');
+  document.querySelector('.modal').classList.add('hidden')
+}
 
 const displayMessage = message =>
   (document.querySelector('.message').textContent = message);
@@ -61,3 +74,10 @@ document.querySelector('.again').addEventListener('click', function () {
   document.querySelector('.guess').value = '';
   document.querySelector('.number').textContent = '?';
 });
+
+btnRules.addEventListener('click', openModal)
+
+modal.addEventListener('click', closeModal)
+
+btnX.addEventListener('click', closeModal) 
+

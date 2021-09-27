@@ -68,11 +68,18 @@ h1 {
   transform: translate(-50%, 50%);
 }
 
-.between {
+.rules {
   font-size: 1.4rem;
   position: absolute;
   top: 2rem;
   right: 2rem;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
 }
 
 .again {
@@ -115,4 +122,61 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 50%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: .5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+}
+
+.rulesList {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+text-align: center;
+padding-bottom: 3rem;
+margin-top: -3rem;
+font-size: 3rem;
+}
+
+.rulesListLi {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.close-modal {
+  margin-left: 100%;
+  border: none;
+  background-color:white;
+  color: #222;
+  font-size: 3rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5rem);
+  z-index: 10;
 }
